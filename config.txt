@@ -1,0 +1,8 @@
+[HardwareType]
+GPU=Intel
+
+[Sensors]
+CpuUsageSensor=CPU Total
+CpuTempSensor=Core Average
+GpuUsageSensor=D3D 3D
+GpuTempSensor=CPU Core #7

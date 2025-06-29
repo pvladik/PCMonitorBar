@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <ImportedNamespaces>LibreHardwareMonitor.Hardware=False,LibreHardwareMonitor.Hardware.Controller.AeroCool=False,LibreHardwareMonitor.Hardware.Controller.AquaComputer=False,LibreHardwareMonitor.Hardware.Cpu=False,LibreHardwareMonitor.Hardware.Gpu=False,LibreHardwareMonitor.Hardware.Motherboard=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,WinFormsApp1=True</ImportedNamespaces>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>CPU bar</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="LibreHardwareMonitor.Hardware" />
+    <Import Include="LibreHardwareMonitor.Hardware.Controller.AeroCool" />
+    <Import Include="LibreHardwareMonitor.Hardware.Controller.AquaComputer" />
+    <Import Include="LibreHardwareMonitor.Hardware.Cpu" />
+    <Import Include="LibreHardwareMonitor.Hardware.Gpu" />
+    <Import Include="LibreHardwareMonitor.Hardware.Motherboard" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aga.Controls">
+      <HintPath>D:\bar\Aga.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HidSharp">
+      <HintPath>D:\bar\HidSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LibreHardwareMonitorLib">
+      <HintPath>D:\bar\LibreHardwareMonitorLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>D:\bar\Microsoft.Win32.TaskScheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\bar\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>D:\bar\OxyPlot.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms">
+      <HintPath>D:\bar\OxyPlot.WindowsForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.CodeDom">
+      <HintPath>D:\bar\System.CodeDom.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
